@@ -1,75 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <description>放置所有的业务层与数据持久层通用代码</description>
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>com.whackon.witmed</groupId>
   <artifactId>witmed-data-commons</artifactId>
-  <version>1.0.0</version>
 
-  <name>witmed-data-commons</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <!--配置项目的打包方式为 JAR 【BEGIN】-->
+  <packaging>jar</packaging>
+  <!--配置项目的打包方式为 JAR 【END】-->
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+  <!--继承witmed-parent项目的父级依赖【BEGIN】-->
+  <parent>
+    <groupId>com.whackon.witmed</groupId>
+    <artifactId>witmed-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <!--继承witmed-parent项目的父级依赖【END】-->
 
   <dependencies>
+    <!--配置witmed-commons依赖【BEGIN】-->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
+      <groupId>com.whackon.witmed</groupId>
+      <artifactId>witmed-commons</artifactId>
+      <version>${parent.version}</version>
     </dependency>
+    <!--配置witmed-commons依赖【END】-->
+
+    <!-- 配置 MySQL Connector/J 依赖 [BEGIN] -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <!-- 配置 MySQL Connector/J 依赖 [END] -->
+
+    <!-- 配置 MyBatis Spring Boot Starter 依赖
+	 配置 MyBatis 和 Spring Boot 结合的依赖【BEGIN】
+-->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>${mybatis-spring-boot-starter.version}</version>
+    </dependency>
+    <!-- 配置 MyBatis Spring Boot Starter 依赖
+		 配置 MyBatis 和 Spring Boot 结合的依赖【END】
+	-->
+
+    <!-- 配置 druid Spring Boot Starter 依赖
+		配置 druid 和 Spring Boot 结合的依赖【BEGIN】
+	-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+      <version>${druid-spring-boot-starter.version}</version>
+    </dependency>
+
+    <!-- 配置 druid Spring Boot Starter 依赖
+		 配置 druid 和 Spring Boot 结合的依赖【END】
+	-->
+
+    <!-- 配置 MyBatis Plus 依赖 [BEGIN] 他是mybatis的增强版类似于JPA -->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-boot-starter</artifactId>
+      <version>${mybatis-plus-boot-starter.version}</version>
+    </dependency>
+    <!-- 配置 MyBatis Plus 依赖 [END] -->
+
+    <!-- 配置 spring-boot-starter-data-redis 缓存的依赖 【BEGIN】-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+      <version>${spring-boot-starter-data-redis.version}</version>
+    </dependency>
+    <!-- 配置 spring-boot-starter-data-redis 缓存的依赖 【END】-->
+
+    <!-- 配置 mapstruct 实体转Vo 或者Vo转实体的依赖【BEGIN】 -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>${mapstruct.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>${mapstruct.version}</version>
+    </dependency>
+    <!-- 配置 mapstruct 实体转Vo 或者Vo转实体的依赖【END】 -->
+
+    <!-- mybatis 分页插件配置 pagehelper-spring-boot-starter 分页工具依赖【BEGIN】 -->
+    <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper-spring-boot-starter -->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper-spring-boot-starter</artifactId>
+      <version>${pagehelper.version}</version>
+    </dependency>
+    <!-- 配置 pagehelper-spring-boot-starter 分页工具依赖【END】 -->
+
+    <!-- 配置 Spring Boot Devtools 依赖 [BEGIN]
+	这是一个热部署插件-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+    </dependency>
+    <!-- 配置 Spring Boot Devtools 依赖 [END] -->
   </dependencies>
 
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.7.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+
 </project>
