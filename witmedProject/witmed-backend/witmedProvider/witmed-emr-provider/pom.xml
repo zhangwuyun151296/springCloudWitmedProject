@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <description>智慧医疗平台信息-电子病历功能生产者模块</description>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>witmed-emr-provider</artifactId>
+
+  <!--配置项目的打包方式为 JAR 【BEGIN】-->
+  <packaging>jar</packaging>
+  <!--配置项目的打包方式为 JAR 【END】-->
+
+  <!--继承witmed-parent项目的父级依赖【BEGIN】-->
+  <parent>
+    <groupId>com.whackon.witmed</groupId>
+    <artifactId>witmed-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <!--继承witmed-parent项目的父级依赖【END】-->
+
+  <dependencies>
+    <!--配置witmed-data-commons放置所有的业务层与数据持久层通用代码的依赖【BEGIN】-->
+    <dependency>
+      <groupId>com.whackon.witmed</groupId>
+      <artifactId>witmed-data-commons</artifactId>
+      <version>${parent.version}</version>
+    </dependency>
+    <!--配置witmed-data-commons放置所有的业务层与数据持久层通用代码的依赖【BEGIN】-->
+  </dependencies>
+
+</project>
