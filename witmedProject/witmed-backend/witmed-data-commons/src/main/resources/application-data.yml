@@ -28,7 +28,7 @@ spring:
         ###设置监控中心密码
         login-password: 123456
         ###设置监控中心登录地址
-        url-pattern: /druid
+        url-pattern: /druid/*
       ###配置监控中心网页管理信息
       web-stat-filter:
         ###开启前端管理界面
@@ -37,3 +37,9 @@ spring:
         url-pattern: /*
         ###配置忽略某些请求监控
         exclusions: /druid/*, *.js, *.gif, *.jpg, *.png, *.css, *.ico
+###配置mybatis信息
+mybatis:
+  ###设置mybatis的Mapper文件地址
+  mapper-locations: classpath:/mapper/*/*.Mapper.xml
+  ###设置mybatis需要设置别名的位置
+  type-aliases-package: com.whackon.witmed.*.pojo.entity
