@@ -23,7 +23,7 @@
     <dependency>
       <groupId>com.whackon.witmed</groupId>
       <artifactId>witmed-data-commons</artifactId>
-      <version>1.0.0</version>
+      <version>${parent.version}</version>
     </dependency>
     <!--配置witmed-data-commons放置所有的业务层与数据持久层通用代码的依赖【BEGIN】-->
   </dependencies>
