@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * <b>智慧医疗平台信息-系统功能模块 Consumer消费者启动类</b>
+ * <b>智慧医疗平台信息-电子病历功能模块 Consumer消费者启动类</b>
  *
  * @Author 张武超
  * @Date 2021/12/29 23:30
