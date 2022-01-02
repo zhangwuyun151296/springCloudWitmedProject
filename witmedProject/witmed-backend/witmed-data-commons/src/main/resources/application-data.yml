@@ -1,0 +1,39 @@
+### 配置jdbc连接信息以及数据连接池和监控中心信息
+spring:
+  ##配置datasource信息
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/witmed_db? useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    ###配置 druid 作为数据库连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      ###最小连接数
+      min-idle: 3
+      ###最大连接数
+      max-active: 10
+      ###初始连接数
+      initial-size: 3
+      ###最小存活时间,以毫秒计算
+      min-evictable-idle-time-millis: 30000
+      ###最大存活时间,以毫秒计算
+      max-evictable-idle-time-millis: 60000
+      ###配置druid监控中心信息
+      stat-view-servlet:
+        ###开启监控中心
+        enabled: true
+        ###设置监控中心登录名
+        login-username: druid
+        ###设置监控中心密码
+        login-password: 123456
+        ###设置监控中心登录地址
+        url-pattern: /druid
+      ###配置监控中心网页管理信息
+      web-stat-filter:
+        ###开启前端管理界面
+        enabled: true
+        ###配置监控所需要的url请求格式
+        url-pattern: /*
+        ###配置忽略某些请求监控
+        exclusions: /druid/*, *.js, *.gif, *.jpg, *.png, *.css, *.ico
