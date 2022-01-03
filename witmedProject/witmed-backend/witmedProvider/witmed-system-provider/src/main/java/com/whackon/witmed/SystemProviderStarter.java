@@ -1,5 +1,6 @@
 package com.whackon.witmed;
 
+import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +19,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 //这个模块是一个客户端连接注册中心
 @EnableEurekaClient
 //这个模块是一个spring boot项目
-@SpringBootApplication
+@SpringBootApplication(exclude={PageHelperAutoConfiguration.class})
 public class SystemProviderStarter {
 	public static void main(String[] args) {
 		SpringApplication.run(SystemProviderStarter.class, args);
