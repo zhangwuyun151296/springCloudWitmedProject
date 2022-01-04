@@ -3,11 +3,11 @@ package com.whackon.witmed.base.pojo.enums;
 /**
  * <b>基础信息功能-系统状态枚举信息</b>
  * <p>
- *     基础视图信息设置如下属性
+ *     基础视图信息设置如下属性<br/>
  *     1、code：状态编码<br/>
  *     2、remarks：状态说明<br/>
- *        STATUS_ENABLE：1-启用
- *        STATUS_DISABLE：0-禁用
+ *        STATUS_ENABLE：1-启用<br/>
+ *        STATUS_DISABLE：0-禁用<br/>
  * </p>
  *
  * @Author 张武超
