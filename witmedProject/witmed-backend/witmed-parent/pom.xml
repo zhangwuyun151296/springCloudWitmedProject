@@ -34,6 +34,7 @@
     <spring-boot-starter-data-redis.version>2.6.1</spring-boot-starter-data-redis.version>
     <mapstruct.version>1.4.2.Final</mapstruct.version>
     <pagehelper.version>1.3.1</pagehelper.version>
+    <lombok.versioin>1.18.22</lombok.versioin>
 
 
   </properties>
@@ -108,6 +109,27 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
+            <!--
+                此时在系统中存在 MapStruct 和 Lombok 两个功能，
+                其中 MapStruct 会编译生成转换代码，会调用到 POJO 的 getter 和 setter 方法，
+                而 Lombok 则可以省略 getter 和 setter 方法，在编译时自动生成，
+                就会导致 MapStruct 编译时找不到 getter 和 setter 方法，
+                需要将两个进行结合
+            -->
+            <configuration>
+              <annotationProcessorPaths>
+                <path>
+                  <groupId>org.mapstruct</groupId>
+                  <artifactId>mapstruct-processor</artifactId>
+                  <version>${mapstruct.version}</version>
+                </path>
+                <path>
+                  <groupId>org.projectlombok</groupId>
+                  <artifactId>lombok</artifactId>
+                  <version>${lombok.version}</version>
+                </path>
+              </annotationProcessorPaths>
+            </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
