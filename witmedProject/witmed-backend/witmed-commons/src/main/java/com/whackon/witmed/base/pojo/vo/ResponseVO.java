@@ -1,16 +1,17 @@
 package com.whackon.witmed.base.pojo.vo;
 
 import com.whackon.witmed.base.pojo.enums.ResponseCode;
+import lombok.Data;
 
 import java.io.Serializable;
 
 /**
  * <b>基础信息功能-系统响应视图信息</b>
  * <p>
- *     系统响应视图信息设置如下属性
+ *     系统响应视图信息设置如下属性<br/>
  *     1、code：系统响应编码<br/>
  *     2、message：系统响应结果<br/>
- *     3、data：系统响应数据
+ *     3、data：系统响应数据<br/>
  *     本项目所有功能返回前端数据<b>都必须以本系统响应视图信息返回</b>
  * </p>
  *
@@ -19,6 +20,7 @@ import java.io.Serializable;
  * @serial 1.0.0
  * @version 1.0.0
  */
+@Data
 public class ResponseVO implements Serializable {
 	private static final long serialVersionUID = -297922567153997117L;
 	private String code;                    //系统响应编码
@@ -28,30 +30,6 @@ public class ResponseVO implements Serializable {
 	public ResponseVO(ResponseCode responseCode, String message, Object data) {
 		this.code = responseCode.getCode();
 		this.message = message;
-		this.data = data;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public Object getData() {
-		return data;
-	}
-
-	public void setData(Object data) {
 		this.data = data;
 	}
 
