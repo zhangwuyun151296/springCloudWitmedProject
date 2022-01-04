@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <description>智慧医疗平台信息-门诊功能生产者模块</description>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>witmed-clinic-consumer</artifactId>
+  <artifactId>witmed-clinic-provider</artifactId>
 
   <!--配置项目的打包方式为 JAR 【BEGIN】-->
   <packaging>jar</packaging>
