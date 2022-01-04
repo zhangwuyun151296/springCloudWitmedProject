@@ -9,7 +9,8 @@ import javax.servlet.http.HttpSession;
 
 /**
  * <b>基础信息功能 - 基础控制层类</b>
- *  <p>基础控制层依赖注册了如下属性：<br/>
+ *  <p>
+ *      基础控制层依赖注册了如下属性：<br/>
  *      1、HttpServletRequest<br/>
  *      2、HttpServletResponse<br/>
  *      3、HttpSession<br/>
