@@ -25,7 +25,7 @@ import java.util.Random;
  *     最多支持 1024 台机器，每台机器每毫秒能够生成最多 4096 个 ID，整个集群理论上每秒可以生成 1024 * 1000 * 4096 = 42 亿个 ID。
  * </p>
  *
- * @author Arthur
+ * @author 张武超
  * @date 2021/12/30
  * @version 1.0.0
  * @since 1.0.0
