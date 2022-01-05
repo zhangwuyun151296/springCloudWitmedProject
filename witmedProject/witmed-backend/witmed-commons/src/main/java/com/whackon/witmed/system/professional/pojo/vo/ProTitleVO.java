@@ -8,8 +8,8 @@ import lombok.Data;
  * <p>
  *     专业职务等级视图信息设置如下属性<br/>
  *     1、id：主键<br/>
- *     2、category：所属类别<br/>
- *     3、rank：所属等级<br/>
+ *     2、proCategoryVO：所属类别<br/>
+ *     3、proRankVO：所属等级<br/>
  *     4、code：编码<br/>
  *     5、name：名称<br/>
  * </p>
@@ -21,9 +21,9 @@ import lombok.Data;
 @Data
 public class ProTitleVO extends BaseVO {
 	private static final long serialVersionUID = -5717484475516625907L;
-	private Long id;                    //主键
-	private String category;            //所属类别
-	private String rank;                //所属等级
-	private String code;                //编码
-	private String name;                //名称
+	private Long id;                        //主键
+	private ProCategoryVO proCategoryVO;    //所属类别
+	private ProRankVO proRankVO;            //所属等级
+	private String code;                    //专业职务编码
+	private String name;                    //专业职务名称
 }

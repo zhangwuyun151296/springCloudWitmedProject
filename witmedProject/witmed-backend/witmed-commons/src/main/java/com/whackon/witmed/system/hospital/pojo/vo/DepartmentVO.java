@@ -8,7 +8,7 @@ import lombok.Data;
  * <p>
  *     医院部门视图信息设置如下属性<br/>
  *     1、id：主键<br/>
- *     2、hospital：所在医院<br/>
+ *     2、hospitalVO：所在医院<br/>
  *     3、parent：上级部门<br/>
  *     4、code：部门编码<br/>
  *     5、name：部门名称<br/>
@@ -22,7 +22,7 @@ import lombok.Data;
 public class DepartmentVO extends BaseVO {
 	private static final long serialVersionUID = 5422723187036639884L;
 	private Long id;                    //主键
-	private String hospital;            //所在医院
+	private HospitalVO hospitalVO;      //所在医院
 	private String parent;              //上级部门
 	private String code;                //部门编码
 	private String name;                //部门名称

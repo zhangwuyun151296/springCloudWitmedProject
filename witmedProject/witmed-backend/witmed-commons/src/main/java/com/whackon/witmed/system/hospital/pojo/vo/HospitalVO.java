@@ -1,6 +1,7 @@
 package com.whackon.witmed.system.hospital.pojo.vo;
 
 import com.whackon.witmed.base.pojo.vo.BaseVO;
+import com.whackon.witmed.system.dictionary.pojo.vo.DivisionVO;
 import lombok.Data;
 
 /**
@@ -20,7 +21,7 @@ import lombok.Data;
  *     11、village：地址-村（街、路、弄等）<br/>
  *     12、doorNo：地址-门牌号码<br/>
  *     13、zipCode：邮政编码<br/>
- *     14、divisionCode：行政区划代码<br/>
+ *     14、divisionVO：行政区划代码<br/>
  *     15、telephoneCat：联系电话-类别信息<br/>
  *     16、telephone：联系电话-号码<br/>
  *     17、email：电子邮件地址<br/>
@@ -46,7 +47,7 @@ public class HospitalVO extends BaseVO {
 	private String village;             //地址-村（街、路、弄等）
 	private String doorNo;              //地址-门牌号码
 	private String zipCode;             //邮政编码
-	private String divisionCode;        //行政区划代码
+	private DivisionVO divisionVO;      //行政区划代码
 	private String telephoneCat;        //联系电话-类别信息
 	private String telephone;           //联系电话-号码
 	private String email;               //电子邮件地址

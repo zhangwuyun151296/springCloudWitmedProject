@@ -1,11 +1,12 @@
 package com.whackon.witmed.system.admin.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.whackon.witmed.base.pojo.entity.BaseEntity;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * <b>系统功能 - 系统用户角色实体信息</b>
@@ -23,11 +24,12 @@ import lombok.Data;
 @Data
 @TableName(value = "sys_role")
 public class Role extends BaseEntity {
-	private static final long serialVersionUID = -2349641612855106975L;
+	private static final long serialVersionUID = 413916734984058353L;
 	@TableId(value = "id",type = IdType.AUTO)
 	private Long id;                    //主键
-	@TableField(value = "code")
 	private String code;                //角色编码
-	@TableField(value = "name")
 	private String name;                //角色名称
+
+
 }
+

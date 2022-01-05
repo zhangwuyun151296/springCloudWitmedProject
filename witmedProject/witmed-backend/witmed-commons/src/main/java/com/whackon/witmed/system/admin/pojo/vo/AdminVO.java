@@ -1,6 +1,11 @@
 package com.whackon.witmed.system.admin.pojo.vo;
 
 import com.whackon.witmed.base.pojo.vo.BaseVO;
+import com.whackon.witmed.system.dictionary.pojo.vo.EducationVO;
+import com.whackon.witmed.system.dictionary.pojo.vo.IdentityVO;
+import com.whackon.witmed.system.hospital.pojo.vo.DepartmentVO;
+import com.whackon.witmed.system.professional.pojo.vo.ProCategoryVO;
+import com.whackon.witmed.system.professional.pojo.vo.ProRankVO;
 import lombok.Data;
 
 /**
@@ -12,12 +17,12 @@ import lombok.Data;
  *      3、name：姓名<br/>
  *      4、cellphone：手机号码<br/>
  *      5、password：登录密码<br/>
- *      6、role：角色<br/>
- *      7、identity：身份<br/>
- *      8、department：所在部门<br/>
- *      9、techPos：服务者专业技术职务<br/>
- *      10、education：学历<br/>
- *      11、techPosRank：服务者专业技术职务等级<br/>
+ *      6、roleVO：角色信息<br/>
+ *      7、identityVO：身份信息<br/>
+ *      8、departmentVO：所在部门信息<br/>
+ *      9、proCategoryVO：服务者专业技术职务信息<br/>
+ *      10、educationVO：学历信息<br/>
+ *      11、proRankVO：服务者专业技术职务等级信息<br/>
  * </p>
  * @author 张武超
  * @date 2022/1/4
@@ -32,10 +37,10 @@ public class AdminVO extends BaseVO {
 	private String name;                         //姓名
 	private String cellphone;                    //手机号码
 	private String password;                     //登录密码
-	private String role;                         //角色
-	private String identity;                     //身份
-	private String department;                   //所在部门
-	private String techPos;                      //服务者专业技术职务
-	private String education;                    //学历
-	private String techPosRank;                  //服务者专业技术职务等级
+	private RoleVO roleVO;                       //角色信息
+	private IdentityVO identityVO;               //身份信息
+	private DepartmentVO departmentVO;           //所在部门信息
+	private ProCategoryVO proCategoryVO;         //服务者专业技术职务信息
+	private EducationVO educationVO;             //学历信息
+	private ProRankVO proRankVO;                 //服务者专业技术职务等级信息
 }
