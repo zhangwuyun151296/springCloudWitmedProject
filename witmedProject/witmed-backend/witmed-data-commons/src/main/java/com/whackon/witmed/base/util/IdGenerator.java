@@ -1,6 +1,9 @@
 package com.whackon.witmed.base.util;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
 
@@ -223,4 +226,20 @@ public class IdGenerator {
 	private long timeGen() {
 		return System.currentTimeMillis();
 	}
+
+
+/*	@RestController
+	public class TestController {
+		//引入雪花算法工具类
+		@Autowired
+		private IdGenerator idGenerator;
+		@GetMapping("/id")
+		public String createId()throws Exception{
+			return idGenerator.createId();
+		}
+
+
+
+	}*/
+
 }

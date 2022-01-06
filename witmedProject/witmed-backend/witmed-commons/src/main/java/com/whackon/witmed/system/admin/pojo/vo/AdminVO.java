@@ -37,10 +37,10 @@ public class AdminVO extends BaseVO {
 	private String name;                         //姓名
 	private String cellphone;                    //手机号码
 	private String password;                     //登录密码
-	private RoleVO roleVO;                       //角色信息
-	private IdentityVO identityVO;               //身份信息
-	private DepartmentVO departmentVO;           //所在部门信息
-	private ProCategoryVO proCategoryVO;         //服务者专业技术职务信息
-	private EducationVO educationVO;             //学历信息
-	private ProRankVO proRankVO;                 //服务者专业技术职务等级信息
+	private String role;                         //角色
+	private String identity;                     //身份
+	private String department;                   //所在部门
+	private String techPos;                      //服务者专业技术职务
+	private String education;                    //学历
+	private String techPosRank;                  //服务者专业技术职务等级
 }

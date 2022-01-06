@@ -68,14 +68,6 @@
     </dependency>
     <!-- 配置 MyBatis Plus 依赖 [END] -->
 
-    <!-- 配置 spring-boot-starter-data-redis 缓存的依赖 【BEGIN】-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
-      <version>${spring-boot-starter-data-redis.version}</version>
-    </dependency>
-    <!-- 配置 spring-boot-starter-data-redis 缓存的依赖 【END】-->
-
     <!-- 配置 mapstruct 实体转Vo 或者Vo转实体的依赖【BEGIN】 -->
     <dependency>
       <groupId>org.mapstruct</groupId>
