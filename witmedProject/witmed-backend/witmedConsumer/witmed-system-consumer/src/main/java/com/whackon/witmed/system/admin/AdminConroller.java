@@ -72,7 +72,7 @@ public class AdminConroller extends BaseController {
 			//此时为了将token交给客户进行存储，那么我们可以选择将Token绑定到Http响应对象的消息头的部分Authorization
 			response.setHeader("Authorization",token);
 			//返回前端登录成功结果
-			ResponseVO.success("系统用户登录成功",adminVO);
+			return ResponseVO.success("系统用户登录成功",adminVO);
 		}
 		return ResponseVO.error("登录失败");
 	}

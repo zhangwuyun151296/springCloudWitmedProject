@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+body {font:14px / 1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif; margin: 0px; color:#353535; background:#fff;}
+form,h1,h3,p,h5,h2,h6,h4,dl,dd,dt {margin: 0px; padding:0;}
+ul {margin:0px; padding:0px; list-style-type: none;}
+li {margin:0px; padding:0px; display: block;}
+img {border: none;}
+textarea {font-size:12px;}
+.clearfix:after {clear:both; content:"."; display:block; height:0pt; visibility:hidden; overflow:hidden;}
+.clearfix{clear:both; height:1px; margin-top:-1px; width:100%; overflow:hidden;}
+a:link,a:visited { color: #353535;	text-decoration: none;}
+a:hover { text-decoration: none; color:#62c30b;}
+.login { background:#fff url(../img/bodybg.gif) repeat-x center top; width:100%;}
+.wrap {width:100%; overflow:hidden; zoom:1; background:url(../img/crmbg.jpg) no-repeat right top;}
+.container {width:1200px; margin:0 auto; overflow:hidden; zoom:1;}
+.header { height:83px; width:100%;}
+.header h1 { font-size:40px; color:#fff; padding:10px 0;}
+.main { height:612px; width:100%;}
+.loginbox {width:355px; height:400px; margin:160px 140px 0 75px; background:#fff; border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; float:left;}
+.main .fr {width:580px; height:400px; float:left; margin:160px 0 0; position:relative;}
+.main .fr h2 { font-size:30px; line-height:45px; color:#fff;}
+.main .fr p { font-size:16px; line-height:24px; color:#fff;}
+.main .fr .hotline {width:200px; height:60px; padding:5px 0; position:absolute; bottom:0; right:0; background:#fa5f36; border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px; }
+.main .fr .hotline span { display:block; font-size:24px; line-height:30px; width:200px; text-align:center; color:#fff;}
+.loginbox h1 { text-align:center; font-size:24px; color:#2e3338; padding:40px 0 35px; line-height:30px; font-weight:normal;}
+.loginbox p { height:30px; padding:0 0 20px 41.5px; overflow:hidden;}
+.loginbox .inputx {width:250px; height:28px; color:#7c98ac; font-size:14px; background:#fff; padding:0 10px; border:1px solid #c9c9c9; line-height:28px; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.loginbox .inputx:focus { border:1px solid #4296f7;}
+.loginbox .subbtn {width:272px; background:#4bb1fb; border:0; height:40px; line-height:40px; font-size:14px; color:#fff; text-align:center;border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+
+.footer { background:#fff; width:100%; overflow:hidden;}
+.footer p { font-size:14px; line-height:50px; color:#787878; text-align:center;}
+
+.editpassword {float: none; margin:160px auto 0;}
+a.forget {float:right; padding-right:42px; text-decoration:underline;}
+a.forget:hover {text-decoration: none;}

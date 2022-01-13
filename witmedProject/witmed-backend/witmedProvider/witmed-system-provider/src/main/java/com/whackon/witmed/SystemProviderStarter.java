@@ -15,7 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @serial 1.0.0
  * @version 1.0.0
  */
-@MapperScan("com.whackon.witmed.*.dao")
+@MapperScan("com.whackon.witmed.*.*.dao")
 //这个模块是一个客户端连接注册中心
 @EnableEurekaClient
 //这个模块是一个spring boot项目

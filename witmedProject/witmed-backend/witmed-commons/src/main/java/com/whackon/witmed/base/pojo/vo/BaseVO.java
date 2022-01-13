@@ -28,7 +28,7 @@ public class BaseVO implements Serializable {
 	private static final long serialVersionUID = -8822520574694244749L;
 	private String status;                  //系统状态：0-禁用，1-启用
 	private String createdUser;             //创建人
-	private Date createTime;                //创建时间
+	private Date createdTime;                //创建时间
 	private String updateUser;              //修改人
 	private Date updateTime;                //修改时间
 }

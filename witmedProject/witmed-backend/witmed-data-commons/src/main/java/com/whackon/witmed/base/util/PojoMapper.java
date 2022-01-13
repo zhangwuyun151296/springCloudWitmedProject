@@ -22,6 +22,7 @@ public interface PojoMapper {
 	 * @param entity
 	 * @return
 	 */
+
 	AdminVO paresToAdminVO(Admin entity);
 	/**
 	 * 将视图转换成实体对象

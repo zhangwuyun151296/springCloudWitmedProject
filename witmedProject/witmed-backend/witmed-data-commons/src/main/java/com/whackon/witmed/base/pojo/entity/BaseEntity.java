@@ -2,7 +2,6 @@ package com.whackon.witmed.base.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -30,8 +29,8 @@ public class BaseEntity implements Serializable {
 	private String status;                  //系统状态：0-禁用，1-启用
 	@TableField(value = "createdUser")
 	private String createdUser;             //创建人
-	@TableField(value = "createTime")
-	private Date createTime;                //创建时间
+	@TableField(value = "createdTime")
+	private Date createdTime;                //创建时间
 	@TableField(value = "updateUser")
 	private String updateUser;              //修改人
 	@TableField(value = "updateTime")

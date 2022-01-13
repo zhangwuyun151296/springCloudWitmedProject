@@ -90,12 +90,12 @@ public class TokenUtil {
 	}
 
 	public static void main(String[] args) {
-		/*Map<String,String>map=new HashMap<>();
+	/*	Map<String,String>map=new HashMap<>();
 		map.put("name","張三");
 		System.out.println(createToken(map,  1800L));*/
-		Map<String, String> map=verifyToken("eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5by15LiJIiwiZXhwIjoxNjQxNDY0NDMxfQ.6tTJ48yqhPhWQFWk4mFHalyBoTNWn1kkG8gj9hmQ074");
+		Map<String, String> map=verifyToken("eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5by15LiJIiwiZXhwIjoxNjQxNDc3NzE4fQ.G7I9ScaC2Tiu7nhgmwauRThvMnv7dZjbFahmaerFu6s");
 		map.forEach((k,v)->{
-			System.out.println(k+"\t"+v);
+			System.out.println("key："+k+"\tvalue："+v);
 		});
 
 	}
